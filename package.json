@@ -1,0 +1,35 @@
+{
+  "name": "test-codelily",
+  "version": "1.0.0",
+  "description": "Group 2 Repository",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ricochette05/Test-CodeLily.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ricochette05/Test-CodeLily/issues"
+  },
+  "homepage": "https://github.com/ricochette05/Test-CodeLily#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.55.1",
+    "@estruyf/github-actions-reporter": "^1.10.0",
+    "@faker-js/faker": "^9.5.0",
+    "@playwright/test": "^1.54.2",
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^24.3.0",
+    "chrome-launcher": "^1.2.0",
+    "dotenv": "^16.6.1",
+    "js-yaml": "^4.1.0",
+    "lighthouse": "^12.7.0",
+    "playwright-html": "1.2.5",
+    "pw-api-plugin": "^2.0.2"
+  }
+}
