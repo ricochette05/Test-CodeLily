@@ -1,7 +1,5 @@
 /* 
-=========================================
 Registration Spec File
-=========================================
 To run, use:
             npm run registration-test
 */

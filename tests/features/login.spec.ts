@@ -1,3 +1,9 @@
+/* 
+Registration Spec File
+To run, use:
+            npm run login-test
+*/
+
 import { test, expect } from "@shared/base";
 import { attachScreenshot } from 'shared/helpers';
 import users from '../../test-data/users.json';
