@@ -1,0 +1,22 @@
+{
+  "name": "test-codelily",
+  "version": "1.0.0",
+  "description": "Group 2 Repository",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ricochette05/Test-CodeLily.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ricochette05/Test-CodeLily/issues"
+  },
+  "homepage": "https://github.com/ricochette05/Test-CodeLily#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.55.1",
+    "@types/node": "^24.5.2"
+  }
+}
