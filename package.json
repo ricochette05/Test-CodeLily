@@ -4,7 +4,10 @@
   "description": "Group 2 Repository",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "codegen": "npx playwright codegen https://grand-youtiao-2114df.netlify.app/login",
+    "login-test": "npx playwright test tests/features/login.spec.ts --project chromium",
+    "registration-test": "npx playwright test tests/features/registration.spec.ts --project chromium"
   },
   "repository": {
     "type": "git",
@@ -19,10 +22,9 @@
   },
   "homepage": "https://github.com/ricochette05/Test-CodeLily#readme",
   "devDependencies": {
-    "@playwright/test": "^1.55.1",
     "@estruyf/github-actions-reporter": "^1.10.0",
     "@faker-js/faker": "^9.5.0",
-    "@playwright/test": "^1.54.2",
+    "@playwright/test": "^1.55.1",
     "@types/js-yaml": "^4.0.9",
     "@types/node": "^24.3.0",
     "chrome-launcher": "^1.2.0",
