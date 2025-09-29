@@ -3,5 +3,10 @@
     "name": "Jane Doe",
     "email": "janedoe@test.com",
     "password": "testUser@2025"
+  },
+  {
+    "name": "Joy Palapar",
+    "email": "plpr@email.com",
+    "password": "Year@2025"
   }
 ]
