@@ -1,0 +1,14 @@
+node_modules/
+/test-results/
+/test-data/
+/blob-report/
+/playwright/.cache/
+/test-screenshots/
+/playwright-report/
+/screenshots/
+.env
+.auth
+topics.txt
+/lighthouse-report/
+
+cathylogs.txt
