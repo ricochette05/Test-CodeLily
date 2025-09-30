@@ -1,0 +1,26 @@
+{
+    "compilerOptions": {
+        "target":"es2017",
+        "module": "commonjs",
+        "lib": ["ES2017", "DOM"],
+        "moduleResolution": "node",
+        "skipLibCheck": true,
+        "resolveJsonModule": true,
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "baseUrl": ".",
+        "strict": true,
+        "forceConsistentCasingInFileNames": true,
+        "paths": {
+            "@shared/*": ["shared/*"],
+            "@pages/*": ["pages/*"],
+            "@tests/*": ["tests/*"]
+        }
+    },
+    "include": [
+        "pages/**/*",
+        "shared/**/*",
+        "tests/**/*",
+        "playwright.config.ts"
+    ]
+}
