@@ -61,7 +61,9 @@ export class LoginPage {
   async verifyLoginFailed(): Promise<void> {
     await expect(this.page.getByText('Client Portal Welcome Logout')).toBeVisible({ timeout: 10000 });
   }
+  
   async screenshot(): Promise<Buffer> {
     return await this.page.screenshot();
   }
+
 }
