@@ -9,20 +9,39 @@ test.describe('Client Portal / Dashboard', () => {
     await portal.goto();
   });
 
-  test('header is visible and correct', async () => {
-    const txt = await portal.getHeaderText();
-    expect(txt).toContain('Client Portal');  // adapt expected string
+  test('Verify header is visible and correct', async () => {
+    await expect(portal.header).toBeVisible();
+    await expect(portal.header).toHaveText('Dashboard Overview');
   });
 
-  test('can open profile menu and logout option exists', async () => {
-    await portal.openProfileMenu();
-    await expect(portal.logoutButton).toBeVisible();
+  test('Verify Dashboard Overview Page contents and logout option exists', async ({ page }) => {
+    // Verify header
+    await expect(portal.header).toHaveText('Dashboard Overview');
+
+    // Metrics
+    // Metrics
+    const activeShipmentsCard = page.locator('text=Active Shipments').locator('..'); 
+    await expect(activeShipmentsCard.getByText('5', { exact: true })).toBeVisible();
+
+    const deliveredCard = page.locator('text=Delivered This Week').locator('..');
+    await expect(deliveredCard.getByText('2', { exact: true })).toBeVisible();
+
+    const pendingCard = page.locator('text=Pending Action').locator('..');
+    await expect(pendingCard.getByText('1', { exact: true })).toBeVisible();
+
+
+    // Recent shipments table
+    await expect(page.getByRole('heading', { name: 'Recent Shipments' })).toBeVisible();
+    await expect(page.getByRole('table')).toBeVisible();
+
+    // Logout link
+    await expect(portal.logoutLink).toBeVisible();
+    await expect(portal.logoutLink).toHaveText('Logout');
   });
 
-  test('logout works (navigates away / shows login)', async ({ page }) => {
-    await portal.openProfileMenu();
-    await portal.logout();
-    // expect navigation to login, e.g.:
-    await expect(page).toHaveURL(/login|signin/);
+  test('Verify logout function)', async ({ page }) => {
+    await portal.logout(); // <-- perform the action
+    await expect(page).toHaveURL(/hackathon\/index\.html$/);
+    await expect(page.getByRole('heading', { name: 'Page not found' })).toBeVisible();
   });
 });

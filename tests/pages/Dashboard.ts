@@ -4,14 +4,14 @@ export class DashboardPage {
   readonly page: Page;
   readonly header: Locator;
   readonly profileMenu: Locator;
-  readonly logoutButton: Locator;
+  readonly logoutLink: Locator;
   // add more locators as needed
   
   constructor(page: Page) {
     this.page = page;
-    this.header = page.locator('header h1');  // adjust selector to actual header
+    this.header = page.getByRole( 'heading', { name: 'Dashboard Overview'});  // adjust selector to actual header
     this.profileMenu = page.locator('[data-testid="profile-menu"]');  // example
-    this.logoutButton = page.locator('button:has-text("Logout")');
+    this.logoutLink = page.getByRole('link', { name: 'Logout'});
   }
 
   async goto() {
@@ -27,7 +27,7 @@ export class DashboardPage {
   }
 
   async logout() {
-    await this.logoutButton.click();
+    await this.logoutLink.click();
   }
 
   // More methods for interactions on the portal page
