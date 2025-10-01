@@ -33,9 +33,6 @@ Open a cmd teminal with your forked repository then type the command 'npm instal
     npx playwright test landing-page.spec.ts
     ```
 
-## 🧪** Sample Test File Describing Happy Path and Unhappy Path**
-
-
 ⚙️ **Technologies Used**
 * Playwright
 * TypeScript
